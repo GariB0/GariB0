@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @GariB0
 - 👀 I’m interested in Physics, Music, Computer Science, and Others
 - 🌱 I’m currently learning about CS because my career changed after 2022!
-- 💞️ I’m just working for my interests! 
+- 💞️ I’m just working for my interest! 
 - 📫 Email: stlyw64@gmail.com
 
 <!---
