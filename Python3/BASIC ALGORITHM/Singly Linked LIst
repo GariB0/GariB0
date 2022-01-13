@@ -1,0 +1,74 @@
+class Node:
+    def __init__(self,data=None):
+        self.data=data
+        self.node=None
+    def setD(self,data):
+        self.data=data
+    def setN(self,node):
+        self.node=node
+    def getD(self):
+        return self.data
+    def getN(self):
+        return self.node
+
+class SLL():
+    def __init__(self,N=None):
+        self.head=N
+        self.length=0
+    def insertF(self,data):
+        N=Node(data)
+        if self.length == 0:
+            self.head=N
+        else:
+            N.setN(self.head)
+            self.head=N
+        self.length +=1
+    def insertL(self,data):
+        N=Node(data)
+        if self.length == 0:
+            self.head=N
+        else:
+            now=self.head
+            while now.getN() !=None:
+                now=now.getN()
+            now.setN(N)
+        self.length +=1
+    def clear(self):
+        self.head=None
+        self.length=0
+    def deleteF(self):
+        if self.length == 0:
+            pass
+        else:
+            self.head=self.head.getN()
+            self.length -=1
+    def deleteL(self):
+        if self.length == 0:
+            pass
+        else:
+            now= self.head
+            before=self.head
+            while now.getN() !=None:
+                before=now
+                now=now.getN()
+            before.setN(None)
+            self.length -=1
+    def insertP(self,pos,data):
+        if pos > self.length or pos <0:
+            return None
+        else:
+            if pos == 0:
+                self.insertF(data)
+            else:
+                if pos == self.length:
+                    self.insetL(data)
+                else:
+                    N=Node(data)
+                    count = 0
+                    now = self.head
+                    while count < pos -1:
+                        count +=1
+                        now = now.getN()
+                    N.setN(now.getN())
+                    now.setN(N)
+                    self.length +=1
