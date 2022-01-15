@@ -1,0 +1,34 @@
+class CQueue:
+    def __init__(self,limit=1):
+        self.Q=[]
+        self.limit=limit
+        self.front=None
+        self.rear=None
+        self.length=0
+    def isEmpty(self):
+        return self.length <=0
+    def enQ(self,data):
+        if self.length>=self.limit:
+            print("Queue Overflow!")
+            return
+        else:
+            self.Q.append(data)
+        if self.front is None:
+            self.front = self.rear = 0
+        else:
+            self.rear = self.length
+        self.length +=1
+        print("Queue Sequence:", self.Q)
+    def deQ(self):
+        if self.length <=0:
+            print("Queue Underflowe!")
+            return
+        else:
+            self.Q.pop(0)
+            self.length -=1
+            if self.length ==0:
+                self.front=self.rear=None
+            else:
+                self.rear=self.length-1
+                print("Queue Sequence:", self.Q)
+
