@@ -1,4 +1,4 @@
-class AS:
+class SA:
     def __init__(self,limit=None):
         self.S=[]
         self.L=limit
