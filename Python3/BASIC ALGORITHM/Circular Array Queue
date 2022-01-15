@@ -1,4 +1,4 @@
-class CQueue:
+class CAQ:
     def __init__(self,limit=1):
         self.Q=[]
         self.limit=limit
