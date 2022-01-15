@@ -1,4 +1,4 @@
-class AStack:
+class AS:
     def __init__(self,limit=None):
         self.S=[]
         self.L=limit
