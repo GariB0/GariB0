@@ -1,0 +1,23 @@
+class AStack:
+    def __init__(self,limit=None):
+        self.S=[]
+        self.L=limit
+    def push(self,data):
+        if len(self.S) >= self.L:
+            print("Overflow: Stack")
+        else:
+            self.S.append(data)
+    def pop(self):
+        if len(self.S) <= 0:
+            print("Underflow: Stack")
+            return 0
+        else:
+             return self.S.pop()
+    def LastD(self):
+        if len(self.S) <= 0:
+            print("Underflow: Stack")
+            return 0
+        else:
+            return self.S[-1]
+    def size(self):
+        return len(self.S)
