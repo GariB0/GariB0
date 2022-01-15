@@ -13,7 +13,7 @@ class SA:
             return 0
         else:
              return self.S.pop()
-    def LastD(self):
+    def getLD(self):
         if len(self.S) <= 0:
             print("Underflow: Stack")
             return 0
